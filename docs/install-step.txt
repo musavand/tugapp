@@ -1,0 +1,16 @@
+1-npm i @nestjs/mapped-types   for define partial dto
+2-npm i @nestjs/typeorm        for drfine entity
+3-npm install @nestjs/event-emitter   for implementation od events
+4-npm i winston   for log implementation
+5-npm install mysql  for mysqldb supoprt
+6-npm i --save @nestjs/config  for load config from env
+main steps
+1-craete user module
+2-create metric module  with MetricsInterceptor Interceptor
+3-craete log manager by winston package
+4-create filter(GlobalExceptionsFilter implements ExceptionFilter)
+5-create event emmioter handler
+6-call app service in 2 mode in app module
+6-1-  mode 1: APP_INTERCEPTOR---MetricsInterceptor
+6-2-  mode 2: APP_FILTER--------GlobalExceptionsFilter
+7-create db module

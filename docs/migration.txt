@@ -1,0 +1,8 @@
+0:set in package.json
+"typeorm": "ts-node ./node-modules/typeormcli -f ./ormconfig.json"
+1: generate migration
+npm run typeorm migration.generate  -n
+2: run migration
+npm run typeorm migration.run
+3: revert migration
+npm run typeorm migration.revert

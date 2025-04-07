@@ -1,0 +1,370 @@
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      summary: test get endpoint
+      tags:
+        - app controller
+  /products:
+    get:
+      operationId: ProductsController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      summary: get all products
+      tags:
+        - product controller
+    post:
+      operationId: ProductsController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProductDto'
+      responses:
+        '201':
+          description: ''
+      summary: create a product
+      tags:
+        - product controller
+  /products/{id}:
+    get:
+      operationId: ProductsController_findById
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+      summary: get a product by id
+      tags:
+        - product controller
+    put:
+      operationId: ProductsController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProductDto'
+      responses:
+        '200':
+          description: ''
+      summary: update a product
+      tags:
+        - product controller
+    delete:
+      operationId: ProductsController_delete
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      summary: delete a product
+      tags:
+        - product controller
+  /category:
+    get:
+      operationId: CategoryController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      summary: get all categories
+      tags:
+        - category controller
+    post:
+      operationId: CategoryController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCategoryDto'
+      responses:
+        '201':
+          description: ''
+      summary: create new category
+      tags:
+        - category controller
+  /category/{id}:
+    get:
+      operationId: CategoryController_findById
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+      summary: get a category by id
+      tags:
+        - category controller
+    put:
+      operationId: CategoryController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCategoryDto'
+      responses:
+        '200':
+          description: ''
+      summary: update a category
+      tags:
+        - category controller
+    delete:
+      operationId: CategoryController_delete
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      summary: delete a category
+      tags:
+        - category controller
+  /companies:
+    get:
+      operationId: CompaniesController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      summary: get all companies
+      tags:
+        - companyy controller
+    post:
+      operationId: CompaniesController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCompanyDto'
+      responses:
+        '201':
+          description: ''
+      summary: create a company
+      tags:
+        - companyy controller
+  /companies/{id}:
+    get:
+      operationId: CompaniesController_findById
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+      summary: get a company by id
+      tags:
+        - companyy controller
+    put:
+      operationId: CompaniesController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCompanyDto'
+      responses:
+        '200':
+          description: ''
+      summary: update a company
+      tags:
+        - companyy controller
+    delete:
+      operationId: CompaniesController_delete
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      summary: delete a company
+      tags:
+        - companyy controller
+  /subcategory:
+    get:
+      operationId: SubcategoryController_findAll
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      summary: get all subcategories
+      tags:
+        - subcategory controller
+    post:
+      operationId: SubcategoryController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSubCategoryDto'
+      responses:
+        '201':
+          description: ''
+      summary: create a subcategory
+      tags:
+        - subcategory controller
+  /subcategory/{id}:
+    get:
+      operationId: SubcategoryController_findById
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: number
+      responses:
+        '200':
+          description: ''
+      summary: get a subcategory by id
+      tags:
+        - subcategory controller
+    put:
+      operationId: SubcategoryController_update
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSubCategoryDto'
+      responses:
+        '200':
+          description: ''
+      summary: update a subcategory
+      tags:
+        - subcategory controller
+    delete:
+      operationId: SubcategoryController_delete
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      summary: delete a subcategory
+      tags:
+        - subcategory controller
+info:
+  title: TUG Api Documentation
+  description: TUG Api Documentation By mehdi musavand
+  version: '1.0'
+  contact: {}
+tags: []
+servers: []
+components:
+  securitySchemes:
+    bearer:
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
+  schemas:
+    CreateProductDto:
+      type: object
+      properties:
+        product_name:
+          type: string
+          description: product
+        companyId:
+          type: number
+          description: company id
+        categoryId:
+          type: number
+          description: category id
+        subcategoryId:
+          type: number
+          description: sub company id
+      required:
+        - product_name
+        - companyId
+        - categoryId
+        - subcategoryId
+    CreateCategoryDto:
+      type: object
+      properties:
+        category_name:
+          type: string
+          description: category
+      required:
+        - category_name
+    CreateCompanyDto:
+      type: object
+      properties:
+        company_name:
+          type: string
+          description: company
+      required:
+        - company_name
+    CreateSubCategoryDto:
+      type: object
+      properties:
+        subcategory_name:
+          type: string
+          description: sub category name
+        categoryId:
+          type: number
+          description: category id
+      required:
+        - subcategory_name
+        - categoryId
