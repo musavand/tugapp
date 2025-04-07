@@ -1,9 +1,14 @@
 # tugapp
 test application for tug company assessment in nest.js 
 
+part1------------------------------------------------
+
 My Package
 In this package I implemented a nest.js application with full CRUD operation on these entities as REST Api:
 Company, Product, Category and Sub Category. Indeed main entity is product and others are its properties, each product belongs to one company and has category and it may be have sub category.
+
+part2------------------------------------------------
+
 
 Main Features:
 •	Using MySQL as Database
@@ -14,6 +19,8 @@ Main Features:
 •	Using Swagger as Test Tools and Endpoints documentation. Users can retrieve api documentation in json and yaml format. The address of swagger documentation is for example www.localhost:3000/docs.
 •	Application has 2 environment file for setting parameters. In this file database connection  data, redis settings,… users can copy .env.example and .env.prod.example as template.
 
+
+part3------------------------------------------------
 
 •	Installation
 Perquisite:
