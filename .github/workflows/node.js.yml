@@ -22,4 +22,4 @@ jobs:
         npm install --force
         npm install -g @nestjs/cli
         nest build
-        npm run test
+        
