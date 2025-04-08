@@ -9,14 +9,13 @@ on:
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
-   
-    steps:    
-    - uses: actions/checkout@v4
-    - name: Setup Node.js      
-      uses: actions/setup-node@v4
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
         node-version: '22.x'
-        cache: 'npm'
       
     - name: Install dependencies, Build and Test
       run: |
